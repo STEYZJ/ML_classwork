@@ -1,0 +1,5 @@
+﻿experiment,dataset,model,samples,features,MSE,RMSE,MAE,R2
+linear_regression,sklearn_diabetes,OLS_closed_form,442,10,2821.750981,53.120156,41.919378,0.47729
+linear_regression,sklearn_diabetes,Ridge_alpha_0.1,442,10,2821.402768,53.116878,41.913977,0.477354
+linear_regression,sklearn_diabetes,Ridge_alpha_1,442,10,2819.982017,53.103503,41.878405,0.477617
+linear_regression,sklearn_diabetes,Ridge_alpha_10,442,10,2817.491144,53.080045,41.856651,0.478079

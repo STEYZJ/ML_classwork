@@ -1,0 +1,193 @@
+{
+  "linear_regression": [
+    {
+      "experiment": "linear_regression",
+      "dataset": "sklearn_diabetes",
+      "model": "OLS_closed_form",
+      "samples": 442,
+      "features": 10,
+      "MSE": 2821.750981,
+      "RMSE": 53.120156,
+      "MAE": 41.919378,
+      "R2": 0.47729
+    },
+    {
+      "experiment": "linear_regression",
+      "dataset": "sklearn_diabetes",
+      "model": "Ridge_alpha_0.1",
+      "samples": 442,
+      "features": 10,
+      "MSE": 2821.402768,
+      "RMSE": 53.116878,
+      "MAE": 41.913977,
+      "R2": 0.477354
+    },
+    {
+      "experiment": "linear_regression",
+      "dataset": "sklearn_diabetes",
+      "model": "Ridge_alpha_1",
+      "samples": 442,
+      "features": 10,
+      "MSE": 2819.982017,
+      "RMSE": 53.103503,
+      "MAE": 41.878405,
+      "R2": 0.477617
+    },
+    {
+      "experiment": "linear_regression",
+      "dataset": "sklearn_diabetes",
+      "model": "Ridge_alpha_10",
+      "samples": 442,
+      "features": 10,
+      "MSE": 2817.491144,
+      "RMSE": 53.080045,
+      "MAE": 41.856651,
+      "R2": 0.478079
+    }
+  ],
+  "lda": [
+    {
+      "experiment": "lda",
+      "dataset": "Iris",
+      "method": "sklearn_LDA_holdout_7_3",
+      "samples": 150,
+      "features": 4,
+      "classes": 3,
+      "ACC": 0.977778
+    },
+    {
+      "experiment": "lda",
+      "dataset": "Iris",
+      "method": "sklearn_LDA_10_fold",
+      "samples": 150,
+      "features": 4,
+      "classes": 3,
+      "ACC": 0.98
+    },
+    {
+      "experiment": "lda",
+      "dataset": "Iris",
+      "method": "sklearn_LDA_leave_one_out",
+      "samples": 150,
+      "features": 4,
+      "classes": 3,
+      "ACC": 0.98
+    },
+    {
+      "experiment": "lda",
+      "dataset": "Sonar",
+      "method": "sklearn_LDA_holdout_7_3",
+      "samples": 208,
+      "features": 60,
+      "classes": 2,
+      "ACC": 0.809524
+    },
+    {
+      "experiment": "lda",
+      "dataset": "Sonar",
+      "method": "sklearn_LDA_10_fold",
+      "samples": 208,
+      "features": 60,
+      "classes": 2,
+      "ACC": 0.76
+    },
+    {
+      "experiment": "lda",
+      "dataset": "Sonar",
+      "method": "sklearn_LDA_leave_one_out",
+      "samples": 208,
+      "features": 60,
+      "classes": 2,
+      "ACC": 0.754808
+    },
+    {
+      "experiment": "lda",
+      "dataset": "Sonar",
+      "method": "custom_Fisher_LDA_10_fold",
+      "samples": 208,
+      "features": 60,
+      "classes": 2,
+      "ACC": 0.755
+    }
+  ],
+  "lda_sonar_feature_curve": [
+    {
+      "experiment": "lda_sonar_feature_curve",
+      "dataset": "Sonar",
+      "selected_features": 5,
+      "ACC": 0.576429
+    },
+    {
+      "experiment": "lda_sonar_feature_curve",
+      "dataset": "Sonar",
+      "selected_features": 10,
+      "ACC": 0.64881
+    },
+    {
+      "experiment": "lda_sonar_feature_curve",
+      "dataset": "Sonar",
+      "selected_features": 20,
+      "ACC": 0.701905
+    },
+    {
+      "experiment": "lda_sonar_feature_curve",
+      "dataset": "Sonar",
+      "selected_features": 40,
+      "ACC": 0.707143
+    },
+    {
+      "experiment": "lda_sonar_feature_curve",
+      "dataset": "Sonar",
+      "selected_features": 60,
+      "ACC": 0.76
+    }
+  ],
+  "svm_face_recognition": [
+    {
+      "experiment": "svm_face_recognition",
+      "dataset": "Yale",
+      "samples": 165,
+      "features": 1024,
+      "classes": 15,
+      "pca_components": 50,
+      "best_params": "{'svc__C': 10, 'svc__gamma': 0.001}",
+      "cv_best_ACC": 0.817589,
+      "test_ACC": 0.74
+    }
+  ],
+  "neural_network": [
+    {
+      "experiment": "neural_network",
+      "dataset": "MNIST",
+      "samples": 3000,
+      "features": 784,
+      "classes": 10,
+      "hidden_layers": "(128,)",
+      "iterations": 21,
+      "loss": 0.006223,
+      "test_ACC": 0.903333
+    },
+    {
+      "experiment": "neural_network",
+      "dataset": "Yale",
+      "samples": 165,
+      "features": 1024,
+      "classes": 15,
+      "hidden_layers": "(64,)",
+      "iterations": 21,
+      "loss": 0.015241,
+      "test_ACC": 0.56
+    },
+    {
+      "experiment": "neural_network",
+      "dataset": "lung",
+      "samples": 203,
+      "features": 3312,
+      "classes": 5,
+      "hidden_layers": "(48,)",
+      "iterations": 14,
+      "loss": 0.000267,
+      "test_ACC": 0.819672
+    }
+  ]
+}

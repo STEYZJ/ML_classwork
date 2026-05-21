@@ -1,4 +1,4 @@
-name: ml-feature-selection
+name: ml-labs
 channels:
   - defaults
 dependencies:
@@ -8,3 +8,4 @@ dependencies:
   - scikit-learn
   - pandas
   - matplotlib
+  - pandoc

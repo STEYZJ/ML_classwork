@@ -1,0 +1,2 @@
+﻿experiment,dataset,samples,features,classes,pca_components,best_params,cv_best_ACC,test_ACC
+svm_face_recognition,Yale,165,1024,15,50,"{'svc__C': 10, 'svc__gamma': 0.001}",0.817589,0.74

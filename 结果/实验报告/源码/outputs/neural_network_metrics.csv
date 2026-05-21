@@ -1,0 +1,4 @@
+﻿experiment,dataset,samples,features,classes,hidden_layers,iterations,loss,test_ACC
+neural_network,MNIST,3000,784,10,"(128,)",21,0.006223,0.903333
+neural_network,Yale,165,1024,15,"(64,)",21,0.015241,0.56
+neural_network,lung,203,3312,5,"(48,)",14,0.000267,0.819672

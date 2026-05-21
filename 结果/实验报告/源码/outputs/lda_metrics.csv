@@ -1,0 +1,8 @@
+﻿experiment,dataset,method,samples,features,classes,ACC
+lda,Iris,sklearn_LDA_holdout_7_3,150,4,3,0.977778
+lda,Iris,sklearn_LDA_10_fold,150,4,3,0.98
+lda,Iris,sklearn_LDA_leave_one_out,150,4,3,0.98
+lda,Sonar,sklearn_LDA_holdout_7_3,208,60,2,0.809524
+lda,Sonar,sklearn_LDA_10_fold,208,60,2,0.76
+lda,Sonar,sklearn_LDA_leave_one_out,208,60,2,0.754808
+lda,Sonar,custom_Fisher_LDA_10_fold,208,60,2,0.755

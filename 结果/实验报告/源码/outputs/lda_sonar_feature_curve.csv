@@ -1,0 +1,6 @@
+﻿experiment,dataset,selected_features,ACC
+lda_sonar_feature_curve,Sonar,5,0.576429
+lda_sonar_feature_curve,Sonar,10,0.64881
+lda_sonar_feature_curve,Sonar,20,0.701905
+lda_sonar_feature_curve,Sonar,40,0.707143
+lda_sonar_feature_curve,Sonar,60,0.76
