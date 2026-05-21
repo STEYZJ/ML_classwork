@@ -1,0 +1,99 @@
+{
+  "lda": [
+    {
+      "experiment": "lda",
+      "dataset": "Iris",
+      "method": "sklearn_LDA_holdout_7_3",
+      "samples": 150,
+      "features": 4,
+      "classes": 3,
+      "ACC": 0.977778
+    },
+    {
+      "experiment": "lda",
+      "dataset": "Iris",
+      "method": "sklearn_LDA_10_fold",
+      "samples": 150,
+      "features": 4,
+      "classes": 3,
+      "ACC": 0.98
+    },
+    {
+      "experiment": "lda",
+      "dataset": "Iris",
+      "method": "sklearn_LDA_leave_one_out",
+      "samples": 150,
+      "features": 4,
+      "classes": 3,
+      "ACC": 0.98
+    },
+    {
+      "experiment": "lda",
+      "dataset": "Sonar",
+      "method": "sklearn_LDA_holdout_7_3",
+      "samples": 208,
+      "features": 60,
+      "classes": 2,
+      "ACC": 0.809524
+    },
+    {
+      "experiment": "lda",
+      "dataset": "Sonar",
+      "method": "sklearn_LDA_10_fold",
+      "samples": 208,
+      "features": 60,
+      "classes": 2,
+      "ACC": 0.76
+    },
+    {
+      "experiment": "lda",
+      "dataset": "Sonar",
+      "method": "sklearn_LDA_leave_one_out",
+      "samples": 208,
+      "features": 60,
+      "classes": 2,
+      "ACC": 0.754808
+    },
+    {
+      "experiment": "lda",
+      "dataset": "Sonar",
+      "method": "custom_Fisher_LDA_10_fold",
+      "samples": 208,
+      "features": 60,
+      "classes": 2,
+      "ACC": 0.755
+    }
+  ],
+  "lda_sonar_feature_curve": [
+    {
+      "experiment": "lda_sonar_feature_curve",
+      "dataset": "Sonar",
+      "selected_features": 5,
+      "ACC": 0.576429
+    },
+    {
+      "experiment": "lda_sonar_feature_curve",
+      "dataset": "Sonar",
+      "selected_features": 10,
+      "ACC": 0.64881
+    },
+    {
+      "experiment": "lda_sonar_feature_curve",
+      "dataset": "Sonar",
+      "selected_features": 20,
+      "ACC": 0.701905
+    },
+    {
+      "experiment": "lda_sonar_feature_curve",
+      "dataset": "Sonar",
+      "selected_features": 40,
+      "ACC": 0.707143
+    },
+    {
+      "experiment": "lda_sonar_feature_curve",
+      "dataset": "Sonar",
+      "selected_features": 60,
+      "ACC": 0.76
+    }
+  ]
+}

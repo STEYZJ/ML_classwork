@@ -9,7 +9,7 @@ https://github.com/STEYZJ/ML_classwork.git
 ```
 
 <!-- repo-meta:start -->
-- 当前版本：`2026.05.21.1`
+- 当前版本：`2026.05.21.2`
 - 稳定分支：`main`
 - 远程仓库：`https://github.com/STEYZJ/ML_classwork`
 - GitHub About：2026春季研究生《机器学习》课程作业：四次实验、无监督特征选择大作业、报告与可复现实验源码
@@ -42,9 +42,11 @@ https://github.com/STEYZJ/ML_classwork.git
 
 ```text
 结果/实验报告/
-├── 实验报告.md
-├── 实验报告.docx
-└── 源码/
+├── README.md
+├── 实验一线性回归/
+├── 实验二LDA/
+├── 实验三SVM人脸识别/
+└── 实验四神经网络/
 ```
 
 已完成的实验：
@@ -54,34 +56,34 @@ https://github.com/STEYZJ/ML_classwork.git
 3. SVM 支持向量机人脸识别；
 4. 全连接神经网络分类器。
 
-一键运行：
+每次实验均拆分为独立目录，目录内包含 `实验报告.md`、`实验报告.docx`、`源码/README.md`、独立运行脚本和对应输出结果。
+
+实验一运行：
 
 ```bash
-cd 结果/实验报告/源码
+cd 结果/实验报告/实验一线性回归/源码
 conda env create -f environment.yml
 conda activate ml-labs
 
-python run_all_experiments.py \
-  --experiment-root /Volumes/Work/学习/作业/机器学习/实验 \
-  --output-dir outputs
+python run_experiment.py --output-dir outputs
 ```
 
-本机 Anaconda 运行方式：
+实验二、三、四运行方式类似，以实验二为例：
 
 ```bash
-/Volumes/Work/opt/anaconda3/bin/python3 run_all_experiments.py \
+cd 结果/实验报告/实验二LDA/源码
+python run_experiment.py \
   --experiment-root /Volumes/Work/学习/作业/机器学习/实验 \
   --output-dir outputs
 ```
 
 主要输出：
 
-- `outputs/linear_regression_metrics.csv`
-- `outputs/lda_metrics.csv`
-- `outputs/lda_sonar_feature_curve.csv`
-- `outputs/svm_face_metrics.csv`
-- `outputs/neural_network_metrics.csv`
-- `outputs/figures/`
+- `结果/实验报告/实验一线性回归/源码/outputs/linear_regression_metrics.csv`
+- `结果/实验报告/实验二LDA/源码/outputs/lda_metrics.csv`
+- `结果/实验报告/实验二LDA/源码/outputs/lda_sonar_feature_curve.csv`
+- `结果/实验报告/实验三SVM人脸识别/源码/outputs/svm_face_metrics.csv`
+- `结果/实验报告/实验四神经网络/源码/outputs/neural_network_metrics.csv`
 
 当前主要结果：
 
@@ -134,9 +136,9 @@ python run_experiment.py \
 
 ## 环境说明
 
-两个源码目录均提供独立 Conda 环境文件：
+实验和大作业源码目录均提供独立 Conda 环境文件：
 
-- 四次实验：`结果/实验报告/源码/environment.yml`，环境名 `ml-labs`
+- 四次实验：`结果/实验报告/实验*/源码/environment.yml`，环境名 `ml-labs`
 - 大作业：`结果/大作业/源码/environment.yml`，环境名 `ml-feature-selection`
 
 也可以使用 pip 安装：

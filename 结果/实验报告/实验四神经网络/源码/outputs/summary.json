@@ -1,0 +1,37 @@
+{
+  "neural_network": [
+    {
+      "experiment": "neural_network",
+      "dataset": "MNIST",
+      "samples": 3000,
+      "features": 784,
+      "classes": 10,
+      "hidden_layers": "(128,)",
+      "iterations": 21,
+      "loss": 0.006223,
+      "test_ACC": 0.903333
+    },
+    {
+      "experiment": "neural_network",
+      "dataset": "Yale",
+      "samples": 165,
+      "features": 1024,
+      "classes": 15,
+      "hidden_layers": "(64,)",
+      "iterations": 21,
+      "loss": 0.015241,
+      "test_ACC": 0.56
+    },
+    {
+      "experiment": "neural_network",
+      "dataset": "lung",
+      "samples": 203,
+      "features": 3312,
+      "classes": 5,
+      "hidden_layers": "(48,)",
+      "iterations": 14,
+      "loss": 0.000267,
+      "test_ACC": 0.819672
+    }
+  ]
+}

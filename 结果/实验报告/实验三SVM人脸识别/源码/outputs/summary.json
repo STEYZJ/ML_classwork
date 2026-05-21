@@ -1,0 +1,15 @@
+{
+  "svm_face_recognition": [
+    {
+      "experiment": "svm_face_recognition",
+      "dataset": "Yale",
+      "samples": 165,
+      "features": 1024,
+      "classes": 15,
+      "pca_components": 50,
+      "best_params": "{'svc__C': 10, 'svc__gamma': 0.001}",
+      "cv_best_ACC": 0.817589,
+      "test_ACC": 0.74
+    }
+  ]
+}
