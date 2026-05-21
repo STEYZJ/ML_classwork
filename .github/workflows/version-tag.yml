@@ -1,0 +1,35 @@
+name: Version Tag
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - VERSION
+      - .github/repo-meta.json
+      - .github/workflows/version-tag.yml
+      - scripts/repo_manage.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  version-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure tag author
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Validate metadata
+        run: python scripts/repo_manage.py check --branch main
+
+      - name: Create and push version tag
+        run: python scripts/repo_manage.py tag --push

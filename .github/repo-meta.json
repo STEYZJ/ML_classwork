@@ -1,0 +1,32 @@
+{
+  "repository": {
+    "name": "STEYZJ/ML_classwork",
+    "url": "https://github.com/STEYZJ/ML_classwork",
+    "description": "2026春季研究生《机器学习》课程作业：四次实验、无监督特征选择大作业、报告与可复现实验源码",
+    "homepage": "https://github.com/STEYZJ/ML_classwork",
+    "topics": [
+      "machine-learning",
+      "coursework",
+      "feature-selection",
+      "regression",
+      "lda",
+      "svm",
+      "neural-network",
+      "python"
+    ]
+  },
+  "version": {
+    "current": "2026.05.21",
+    "tag_prefix": "v"
+  },
+  "branches": {
+    "default": "main",
+    "allowed_prefixes": [
+      "work/",
+      "docs/",
+      "experiment/",
+      "fix/",
+      "release/"
+    ]
+  }
+}

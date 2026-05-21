@@ -1,0 +1,21 @@
+name: Repository Check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repo-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate metadata, version, README, and branch
+        env:
+          BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+        run: python scripts/repo_manage.py check --branch "$BRANCH_NAME"

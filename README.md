@@ -8,6 +8,14 @@
 https://github.com/STEYZJ/ML_classwork.git
 ```
 
+<!-- repo-meta:start -->
+- 当前版本：`2026.05.21`
+- 稳定分支：`main`
+- 远程仓库：`https://github.com/STEYZJ/ML_classwork`
+- GitHub About：2026春季研究生《机器学习》课程作业：四次实验、无监督特征选择大作业、报告与可复现实验源码
+- Topics：`machine-learning` `coursework` `feature-selection` `regression` `lda` `svm` `neural-network` `python`
+<!-- repo-meta:end -->
+
 ## 目录结构
 
 ```text
@@ -137,7 +145,7 @@ python run_experiment.py \
 pip install -r requirements.txt
 ```
 
-## Git 管理
+## 自动化管理
 
 当前远程仓库：
 
@@ -146,13 +154,35 @@ git remote -v
 # origin  https://github.com/STEYZJ/ML_classwork.git
 ```
 
-推荐提交流程：
+仓库已经提供自动管理配置：
+
+- `.github/repo-meta.json`：统一维护仓库 About、Topics、默认分支、允许分支前缀和当前版本；
+- `VERSION`：当前版本号，GitHub Actions 会在 `main` 分支按该文件自动创建版本标签；
+- `scripts/repo_manage.py`：本地管理脚本，可检查元数据、更新 README、升级版本、创建规范分支、同步 GitHub About；
+- `.github/workflows/repo-check.yml`：每次 push/PR 自动检查版本、README 元信息和分支命名；
+- `.github/workflows/version-tag.yml`：`VERSION` 变化后自动创建并推送 `v版本号` 标签；
+- `.github/workflows/sync-about.yml`：配置仓库 Secret `REPO_ADMIN_TOKEN` 后自动同步 GitHub About 和 Topics。
+
+常用命令：
 
 ```bash
-git status
-git add README.md .gitignore dataset 实验 大作业 结果
-git commit -m "Update lab reports and project README"
-git push origin main
+# 检查版本、README 元数据和当前分支命名
+python scripts/repo_manage.py check
+
+# 根据 .github/repo-meta.json 自动更新 VERSION 和 README 元数据块
+python scripts/repo_manage.py update
+
+# 按日期升级版本，例如 2026.05.21 -> 2026.05.21.1
+python scripts/repo_manage.py bump
+
+# 创建规范分支，可选 work/docs/experiment/fix/release
+python scripts/repo_manage.py branch docs "update readme" --push
+
+# 使用 REPO_ADMIN_TOKEN 或 GH_TOKEN 同步 GitHub About
+python scripts/repo_manage.py sync-about
+
+# 根据 VERSION 创建并推送版本标签
+python scripts/repo_manage.py tag --push
 ```
 
 `.gitignore` 已忽略：

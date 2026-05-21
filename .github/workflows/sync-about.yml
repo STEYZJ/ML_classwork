@@ -1,0 +1,32 @@
+name: Sync GitHub About
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/repo-meta.json
+      - .github/workflows/sync-about.yml
+      - scripts/repo_manage.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync-about:
+    runs-on: ubuntu-latest
+    env:
+      REPO_ADMIN_TOKEN: ${{ secrets.REPO_ADMIN_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Explain missing token
+        if: ${{ env.REPO_ADMIN_TOKEN == '' }}
+        run: |
+          echo "::notice title=REPO_ADMIN_TOKEN missing::Add a repository secret named REPO_ADMIN_TOKEN with Administration read/write permission to sync About automatically."
+
+      - name: Sync About metadata
+        if: ${{ env.REPO_ADMIN_TOKEN != '' }}
+        run: python scripts/repo_manage.py sync-about
