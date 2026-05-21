@@ -5,6 +5,7 @@
 dataset/*.rar
 实验/**/LDA 实验_files/
 实验/**/SVM 支持向量机人脸识别_files/
+/模板
 
 # macOS metadata
 .DS_Store
