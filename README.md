@@ -9,7 +9,7 @@ https://github.com/STEYZJ/ML_classwork.git
 ```
 
 <!-- repo-meta:start -->
-- 当前版本：`2026.05.21`
+- 当前版本：`2026.05.21.1`
 - 稳定分支：`main`
 - 远程仓库：`https://github.com/STEYZJ/ML_classwork`
 - GitHub About：2026春季研究生《机器学习》课程作业：四次实验、无监督特征选择大作业、报告与可复现实验源码

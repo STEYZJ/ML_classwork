@@ -2,6 +2,8 @@ name: Repository Check
 
 on:
   push:
+    branches:
+      - "**"
   pull_request:
   workflow_dispatch:
 
